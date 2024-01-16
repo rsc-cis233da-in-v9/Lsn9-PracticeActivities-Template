@@ -1,0 +1,97 @@
+/* 
+  Name:
+*/
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,400;0,700;1,600&family=Montserrat&family=Share+Tech+Mono&display=swap');
+:root {
+  --main-color-100: hsl(218, 50%, 95%);
+  --main-color-400: hsl(218, 60%, 65%);
+  --main-color-600: hsl(218, 60%, 45%);
+  --main-color-800: hsl(218, 60%, 15%);
+  --accent-color-100: hsl(38, 50%, 90%);
+  --accent-color-400: hsl(38, 55%, 65%);
+  --accent-color-600: hsl(38, 40%, 40%);
+  --accent-color-800: hsl(38, 20%, 15%);
+  --font-headings: 'Crimson Pro', serif;
+  --font-main: 'Montserrat', Verdana, sans-serif;
+  --font-code: 'Share Tech Mono', Consolas, monospace;
+}
+*, *::after, *::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: var(--font-main);
+  color: var(--main-color-800);
+  background-color: var(--main-color-100);
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: 5rem 3.25rem minmax(calc(100vh - 11.25rem), auto) 3rem; 
+  /* minmax is used for cases where there is little content to have the footer on the bottom of the page and if there is more content than the page height, it will show a scroll bar and push the footer down. */
+  align-items: center;
+}
+header {
+  background-color: var(--accent-color-100);
+  grid-row-start: 1;
+  height: 100%;
+}
+header h1 {
+  text-align: center;
+  padding-top: 1rem;
+}
+nav {
+  grid-row-start: 2;
+  background-color: var(--main-color-400);
+  background-image: linear-gradient(195deg, var(--main-color-400), var(--main-color-600));
+  box-shadow: 2px 0 3px var(--main-color-800);
+}
+nav ul {
+  display: flex;
+  list-style-type: none;
+  justify-content: center;
+}
+nav a {
+  color: var(--accent-color-100);
+  text-decoration: none;
+  width: 100%;
+  padding: 1rem;
+  display: block;
+}
+nav a:hover {
+  background-image: linear-gradient(to top, var(--main-color-800), var(--main-color-600));
+}
+main {
+  grid-row-start: 3;
+  padding: 1rem;
+  align-self: flex-start;
+}
+dt {
+  font-weight: 700;
+  padding: 1rem 0;
+}
+dd {
+  padding: 0 1rem;
+}
+footer {
+  grid-row-start: 4;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: var(--accent-color-100);
+  font-size: .85rem;
+  height: 100%;
+}
+footer p span {
+  font-weight: 700;
+}
+/* Skip Navigation styles - start */
+
+/* Skip navigation styles - end */
+/* Tab Component styles - Start */
+
+/* Tab Component styles - End */
+/* Figure Code Blocks styles - start */
+
+/* Figure code blocks styles - end */
+
